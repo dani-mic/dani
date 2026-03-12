@@ -1,10 +1,19 @@
-# Dev Toolkit - Contributors Wall
+# Open Source Contributors Wall
 
-A community-driven project where developers add their profile card by contributing a simple JSON file. Built to help beginners make their **first open-source contribution**.
+> A **GDG on Campus HiLCoE** project for the *"Let's Dive into Open Source: Your Adventure in Teamwork"* event — March 14, 2026 | Addis Ababa, Ethiopia
 
-## Live Preview
+A community-driven contributors wall where developers add their profile card by contributing a simple JSON file. Built to help beginners make their **first open-source contribution**.
 
-Open `index.html` in your browser to see all contributor profile cards displayed in a beautiful grid.
+## Features
+
+- Profile cards rendered from JSON files
+- Search and filter contributors by name or skill
+- Animated card loading with staggered fade-in
+- Live contributor counter with count-up animation
+- Confetti celebration on page load
+- Dark / Light mode toggle with saved preference
+- Responsive design for all screen sizes
+- Google-colored accent bar with GDG branding
 
 ## How to Contribute
 
@@ -12,7 +21,8 @@ Open `index.html` in your browser to see all contributor profile cards displayed
 2. **Clone** your fork locally
 3. **Create a branch** for your contribution
 4. **Add your JSON file** in the `contributors/` folder
-5. **Open a Pull Request**
+5. **Register your file** in `script.js`
+6. **Open a Pull Request**
 
 See the full step-by-step guide in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -35,16 +45,40 @@ Create a file named `<your-github-username>.json` inside the `contributors/` fol
 }
 ```
 
+Then open `script.js` and add your filename to the `contributorFiles` array:
+
+```javascript
+const contributorFiles = [
+  "naol.json",
+  "your-github-username.json"  // <-- add yours here
+];
+```
+
+## Run Locally
+
+Since the page uses `fetch()` to load JSON files, you need a local server:
+
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+```
+
+Then open `http://localhost:8000` in your browser.
+
 ## Project Structure
 
 ```
 dev-toolkit/
-├── contributors/        ← Add your JSON file here!
+├── contributors/          ← Add your JSON file here!
 │   └── naol.json
 ├── assets/
 │   ├── css/
 │   │   └── style.css
 │   └── images/
+│       └── logo.png
 ├── index.html
 ├── script.js
 ├── README.md
@@ -52,6 +86,17 @@ dev-toolkit/
 ├── CODE_OF_CONDUCT.md
 └── LICENSE
 ```
+
+## Event Details
+
+| | |
+|---|---|
+| **Event** | Let's Dive into Open Source: Your Adventure in Teamwork |
+| **Organized by** | GDG on Campus HiLCoE School of Computer Science & Technology |
+| **Date** | Saturday, March 14, 2026 |
+| **Time** | 9:00 AM – 10:30 AM (EAT) |
+| **Location** | HiLCoE School, 4 Kilo, Addis Ababa, Ethiopia |
+| **Event Page** | [GDG Community](https://gdg.community.dev/events/details/google-gdg-on-campus-hilcoe-school-of-computer-science-and-technology-addis-ababa-ethiopia-presents-lets-dive-into-open-source-your-adventure-in-teamwork/) |
 
 ## License
 
