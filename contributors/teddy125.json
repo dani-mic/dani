@@ -1,0 +1,13 @@
+{
+    "name": "Teddy",
+    "github": "teddy125",
+    "avatar": "https://github.com/teddy125.png",
+    "bio": "Good citizen",
+    "skills": ["Sql", "mongodb"],
+    "social": {
+      "twitter": "",
+      "linkedin": "",
+      "website": ""
+    }
+  }
+  

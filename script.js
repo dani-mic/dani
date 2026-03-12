@@ -2,7 +2,8 @@ const CONTRIBUTORS_DIR = "contributors";
 
 const contributorFiles = [
   "naol.json",
-  "naolyizotaw13.json"
+  "naolyizotaw13.json",
+  "teddy125.json"
 ];
 
 async function loadContributor(filename) {
